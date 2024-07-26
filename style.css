@@ -40,7 +40,7 @@ h6 {
     color: #3a3a3a;
 }
 .coming-soon {
-    color: #0593ff; /* Change color of "Coming Soon" */
+    color: #fff; /* Change color of "Coming Soon" */
 }
 #preloader {
     overflow: hidden;
