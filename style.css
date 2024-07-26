@@ -11,6 +11,11 @@
 @import 'css/pe-icon-7-stroke.css';
 @import 'css/themify-icons.css';
 @import 'css/plugins/rain.css';
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: cover;
+    }
+}
 
 /* -------------------
 :: 1.0 Base CSS Start
@@ -34,7 +39,9 @@ h5,
 h6 {
     color: #3a3a3a;
 }
-
+.coming-soon {
+    color: #1aff00; /* Change color of "Coming Soon" */
+}
 #preloader {
     overflow: hidden;
     background-color: #fff;
@@ -742,10 +749,11 @@ p {
 }
 
 .welcome_text_business > h6 {
-    color: #fff;
+    color: #03fb77;
     letter-spacing: 2px;
     font-weight: 400;
     margin-bottom: 15px;
+    font-size: 50px;
 }
 
 .welcome_text_business > h2 {
@@ -779,9 +787,9 @@ p {
 /* ----- headline ----- */
 
 .welcome-text.cd-intro > h1 {
-    font-size: 72px;
+    font-size: 92px;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .cd-headline.rotate-1 .cd-words-wrapper {
@@ -1328,7 +1336,7 @@ p {
 }
 
 .about-text > h6 {
-    font-size: 16px;
+    font-size: 50px;
     font-weight: 400;
     line-height: 30px;
     margin-bottom: 25px;
@@ -3284,7 +3292,7 @@ ul.children .comment-content {
   }
   .container .time-content {
     display: flex;
-    column-gap: 30px;
+    column-gap: 65px;
     align-items: center;
   }
   .time-content .time {
