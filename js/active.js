@@ -19,11 +19,11 @@
             autoplay: true,
             smartSpeed: 1500,
             nav: true,
-            navText: ["<i class='pe-7s-angle-left'</i>", "<i class='pe-7s-angle-right'</i>"],
+            navText: ["<i class='pe-7s-angle-left'></i>", "<i class='pe-7s-angle-right'></i>"],
             dots: true,
             animateIn: 'fadeIn',
             animateOut: 'fadeOut'
-        })
+        });
 
         welcomeSlides.on('translate.owl.carousel', function () {
             var layer = $("[data-animation]");
@@ -133,9 +133,9 @@
     $('.portfolio-menu button.btn').on('click', function () {
         $('.portfolio-menu button.btn.btn-md').removeClass('active');
         $(this).addClass('active');
-    })
+    });
 
-    // :: Masonary Gallery Active Code
+    // :: Masonry Gallery Active Code
     if ($.fn.imagesLoaded) {
         $('.gallery_full_width_images_area').imagesLoaded(function () {
             // Filter items on button click
@@ -215,8 +215,26 @@
     });
 
     // :: PreventDefault a Click
-    $("a[href='#']").on('click', function ($) {
-        $.preventDefault();
+    $("a[href='#']").on('click', function (event) {
+        event.preventDefault();
     });
-    
+
+    // :: Mouse-Follow Animation Code
+    $(document).ready(function () {
+        var $circle = $('.circle');
+        
+        $(document).on('mousemove', function (e) {
+            $circle.each(function () {
+                var x = e.clientX;
+                var y = e.clientY;
+                var dx = Math.random() * 100 - 50;
+                var dy = Math.random() * 100 - 50;
+                $(this).css({
+                    left: (x + dx) + 'px',
+                    top: (y + dy) + 'px'
+                });
+            });
+        });
+    });
+
 })(jQuery);
